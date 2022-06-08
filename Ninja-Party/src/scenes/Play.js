@@ -22,17 +22,22 @@ class Play extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(.5, .5, 'layer1').setOrigin(0);
-        this.add.image(.5, .5, 'layer2').setOrigin(0);
-        this.add.image(.5, .5, 'layer3').setOrigin(0);
-        this.add.image(.5, .5, 'layer4').setOrigin(0);
-        this.add.image(.5, .5, 'layer5').setOrigin(0);
-        this.add.image(.5, .5, 'layer6').setOrigin(0);
-        this.add.image(.5, .5, 'layer7').setOrigin(0);
-        this.add.image(.5, .5, 'layer8').setOrigin(0);
-        this.add.image(.5, .5, 'layer9').setOrigin(0);
-        this.add.image(.5, .5, 'layer10').setOrigin(0);
-        this.add.image(.5, .5, 'layer11').setOrigin(0);
+        const width = this.scale.width
+        const height = this.scale.height
+
+        this.add.image(.5, .5, 'layer1').setOrigin(0).setScrollFactor(0);
+        this.add.image(.5, .5, 'layer2').setOrigin(0).setScrollFactor(.1);;
+        this.add.image(.5, .5, 'layer3').setOrigin(0).setScrollFactor(.2);;
+        this.add.image(.5, .5, 'layer4').setOrigin(0).setScrollFactor(.3);;
+        this.add.image(.5, .5, 'layer5').setOrigin(0).setScrollFactor(.4);;
+        this.add.image(.5, .5, 'layer6').setOrigin(0).setScrollFactor(.5);;
+        this.add.image(.5, .5, 'layer7').setOrigin(0).setScrollFactor(.6);;
+        this.add.image(.5, .5, 'layer8').setOrigin(0).setScrollFactor(.7);;
+        this.add.image(.5, .5, 'layer9').setOrigin(0).setScrollFactor(.8);;
+        this.add.image(.5, .5, 'layer10').setOrigin(0).setScrollFactor(.9);;
+        this.add.image(.5, .5, 'layer11').setOrigin(0).setScrollFactor(1);;
+
+        this.cameras.main.setBounds(0, 0, width * 3, height)
     }
 
 
